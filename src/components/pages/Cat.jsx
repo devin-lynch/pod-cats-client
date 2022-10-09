@@ -35,6 +35,7 @@ export default function Cat() {
             // need to determine where this is posting
             await axios.post(`${process.env.REACT_APP_SERVER_URL}/api-v1/cats/new`, cat)
             console.log()
+            navigate('/profile')
         } catch(err) {
             console.warn(err)
             if (err.response) {
